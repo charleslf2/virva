@@ -14,9 +14,9 @@ setup(
     description="Virva is the simplest synthetic dataframe generator ",
     long_description=open("README.md", "r", encoding="utf-8").read(),
     long_description_content_type='text/markdown',
-    url="",
+    url="https://github.com/charleslf2/virva",
     project_urls={
-        "Bug Tracker":"
+        "Bug Tracker":"https://github.com/charleslf2/virva/issues"
     },
     author="Charles TCHANAKE",
     author_email="datadevfernolf@gmail.com",
