@@ -28,9 +28,26 @@ pip install virva
 ```python
 
 # Import Virva generator
+>>> from virva import Generator
 
->>> from virva import Generator 
->>> dataframe = Generator.generate_names("Names", number=50)
+# generate 50 random names
+>>> dataframe_one= Generator.generate_names("Names", number=50)
+
+# generate 50 random cities
+>>>dataframe_two = Generator.generate_cities("Cities", number=50)
+
+# generate 50 random jobs
+>>>dataframe_three = Generator.generate_jobs("Jobs", number=50)
+
+# generate 50 random age's between 5 and  18 year old
+>>> dataframe_four =Generator.generate_numeric("Ages", number=50, 5, 18)
+
+#generate csv file with above dataframe with the name "my_shynthetic_dataframe"
+>>>list_of_dataframe=[dataframe_one, dataframe_two,dataframe_three,
+dataframe_four]
+
+>>>Generator.assemble(output_directory_path, list_of_dataframe, "my_shynthetic_dataframe")
+
 
 ```
 
