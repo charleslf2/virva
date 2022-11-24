@@ -1,0 +1,5 @@
+generated_data/
+venv/
+/test.py
+/todo.txt
+dist/
