@@ -4,7 +4,7 @@ classifiers=[
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
-    "Development Status :: Alpha",
+    "Development Status :: 3 - Alpha"
 ]
 
 
