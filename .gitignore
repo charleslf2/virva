@@ -2,5 +2,8 @@ generated_data/
 venv/
 /test.py
 /todo.txt
+/upcoming.txt
 dist/
 virva.egg-info/
+site/
+/mkdocs.yml

@@ -1,2 +1,2 @@
 
-from virva.main import *
+from virva import core

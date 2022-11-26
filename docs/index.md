@@ -1,11 +1,12 @@
+# Welcome to Virva Documentation
 
-![virvalogo](docs\rsc\virva.png)
-
+![virvalogo](rsc\virva.png)
 
 Virva is the simplest synthetic dataframe generator 
 
+[Virva github page](https://github.com/charleslf2/virva)
 # Purpose of the package
-+  The purpose of this package is to provide to machine learning practitioners the world simplest synthetic dataframe generator
+The purpose of this package is to provide to machine learning practitioners the world simplest synthetic dataframe generator
 
 
 # Features
@@ -58,6 +59,9 @@ dataframe_four]
 Contribution are welcome.
 Notice a bug ? let us know. Thanks you
 
+Check the [Virva github page](https://github.com/charleslf2/virva)
+
 ### Author
 + Main Maitainer : Charles TCHANAKE
 + email : datadevfernolf@gmail.com 
+
