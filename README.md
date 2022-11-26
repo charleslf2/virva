@@ -1,9 +1,8 @@
-
-![virvalogo](docs\rsc\virva.png)
-
+# Virva
 
 Virva is the simplest synthetic dataframe generator 
 
+check the  [Virva documentation](https://charleslf2.github.io/virva/) here
 # Purpose of the package
 +  The purpose of this package is to provide to machine learning practitioners the world simplest synthetic dataframe generator
 
