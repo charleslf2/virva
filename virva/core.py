@@ -1,4 +1,4 @@
-#version Alpha : 0.0.4
+#version Alpha : 0.0.5
 
 import random
 import pandas as pd
@@ -26,7 +26,7 @@ def Constructor(path, column_name, number):
     infile=open(path, "r")
     aline=infile.readline()
     aline_length= len(aline.split(","))
-    print(aline_length)
+    #print(aline_length)
 
     for i in range(0, number):
         n_random=random.randint(0,aline_length-1)
@@ -44,10 +44,10 @@ class Generator:
         pass
 
 #===============================================================
-    def generate_numeric(column_name:str, number:int, gen_start:int, gen_end:int):
+    def generate_integers(column_name:str, number:int, gen_start:int, gen_end:int):
 
         """
-        This function generate random  numeric values acording to your params
+        This function generate random  integer values acording to your params
 
         Params:
         ---------
@@ -107,7 +107,41 @@ class Generator:
 
         return dataframe
 
-    
+#======================================================
+
+    def generate_objects(column_name:str, number:int, list_of_object):
+
+        """
+        This function generate random variables (with dtype == objects) according to your params
+
+        Params:
+        ---------
+        column_name(String|required)="The name of the column"
+
+        number(Integer|required)= "The number of sample you want to generate"
+
+        list_of_object(List|required)= "Represent the database for the generator"
+
+        Usages:
+        --------
+
+        >>> Generator.generate_objects(column_name="Gender", number=50, list_of_object=["M", "F"] )
+
+        """
+        list=[]
+        list_of_object=list_of_object
+        list_lenght=len(list_of_object)
+
+        for i in range(0, number):
+            n_random=random.randint(0,list_lenght-1)
+            name=list_of_object[n_random]
+            list.append(name)
+            d={column_name:list}
+            dataframe=pd.DataFrame(data=d)
+
+        return dataframe
+
+
 #===================================================
     def generate_names(column_name:str, number:int):
 
@@ -305,7 +339,7 @@ class Generator:
         return Constructor(path, column_name, number)
 
 #=============================================================
-    def assemble(path, data, name:str):
+    def assemble(path, list_of_data, name:str):
 
         """
         This function assemble your generated dataframe in one, compact csv file
@@ -315,7 +349,7 @@ class Generator:
 
         path(required)=The output directory ; Should be a directory
 
-        data(List|required)=The list of data to concatenate ; Should be a list of data you want to assemble 
+        list_of_data(List|required)=The list of data to concatenate ; Should be a list of data you want to assemble 
 
         name(String|required)= The name  of the csv file 
 
@@ -325,10 +359,10 @@ class Generator:
         >>> Generator.assemble(your_directory_path, [dataframe_1, dataframe_2, dataframe3] , "my_synthetic_dataset")
         """
 
-        if type(data)==list:
+        if type(list_of_data)==list:
             pass
         else:
-            raise ValueError("The data variables should be a list of dataframes")
+            raise ValueError("list_of_data should be a list of dataframes")
 
         isdir=os.path.isdir(path)
         
@@ -337,7 +371,7 @@ class Generator:
         else:
             raise ValueError("The path should be a directory")
             
-        data=pd.concat(data, axis=1)
+        data=pd.concat(list_of_data, axis=1)
 
         path=path
         data.to_csv(os.path.join(path, name+".csv"), sep=",")

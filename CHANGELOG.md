@@ -23,3 +23,10 @@ Change Log
 - fix copy paste problem
 -  Code refactoring
 - adding virva logo
+- adding virva documentation
+
+0.0.4(11/26/2022)
+--------------------
+- Adding object generator
+- change generate_numeric to generate_integers
+

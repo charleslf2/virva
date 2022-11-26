@@ -2,9 +2,11 @@
 
 This page gives an overview of all Virva functions and methods
 
-+[generate_numeric](#generate_numeric)
++[generate_integers](#generate_integers)
 
 +[generate_floats](#generate_floats)
+
++[generate_objects](#generate_objects)
 
 +[generate_names](#generate_names)
 
@@ -24,11 +26,14 @@ This page gives an overview of all Virva functions and methods
 
 +[assemble](#assemble)
 
-***generate_numeric*** <a name='generate_numeric'></a>
-This function generate random  numeric values acording to your params
+***generate_integers*** <a name='generate_integers'></a>
+This function generate random  integer values acording to your params
 
 ***generate_floats***<a name='generate_floats'></a>
 This function generate random  float  values acording to your params
+
+***generate_objects***<a name='generate_objects'></a>
+This function generate random variables (with dtype == objects) according to your params
 
 ***generate_names***<a name='generate_names'></a>
 This function generate random names 

@@ -10,14 +10,16 @@ The purpose of this package is to provide to machine learning practitioners the 
 
 
 # Features
-+  Synthetic dataframe generator 
++ Generate synthetic dataframe of any lenght 
 + Random names generations
 + Random cities generations
 + Random jobs title generations
 + Random Zipcode generations
 + Random contrie generations
 + CSV export
-+ And much more 
++ Generate custom categorical variables
++ Generate custom numerical variables
++ And much more
 
 
 
@@ -46,7 +48,7 @@ pip install virva
 >>> dataframe_three = Generator.generate_jobs("Jobs", number=50)
 
 # generate 50 random age's between 5 and  18 year old
->>> dataframe_four =Generator.generate_numeric("Ages", number=50, 5, 18)
+>>> dataframe_four =Generator.generate_integers("Ages", number=50, 5, 18)
 
 #generate csv file with above dataframe with the name "my_shynthetic_dataframe"
 >>> list_of_dataframe=[dataframe_one, dataframe_two,dataframe_three,
