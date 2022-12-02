@@ -30,3 +30,11 @@ Change Log
 - Adding object generator
 - change generate_numeric to generate_integers
 
+0.0.5(11/27/2022)
+------------------
+- small fix
+
+0.0.6(12/2/2022)
+----------------
+- Changing txt paths
+ 

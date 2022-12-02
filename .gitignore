@@ -8,3 +8,4 @@ virva.egg-info/
 site/
 /mkdocs.yml
 /kaggle.py
+build/

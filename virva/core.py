@@ -1,4 +1,4 @@
-#version Alpha : 0.0.5
+#version Alpha : 0.0.6
 
 import random
 import pandas as pd
@@ -161,7 +161,7 @@ class Generator:
         >>> Generator.generate_names(column_name="Names", number=50) 
         """
 
-        path=r"C:\Users\Charles TCHANAKE\Desktop\virva\data\names.txt"
+        path=r"C:\Users\dataf\Desktop\virva\data\names.txt"
 
         return Constructor(path, column_name, number)
         
@@ -209,8 +209,7 @@ class Generator:
         """
 
 
-        path=r"C:\Users\Charles TCHANAKE\Desktop\virva\data\cities.txt"
-
+        path=r"C:\Users\dataf\Desktop\virva\data\cities.txt"
         return Constructor(path, column_name, number)
 
 #===========================================================
@@ -233,7 +232,7 @@ class Generator:
         >>> Generator.generate_zipcodes(column_name="Zipcodes", number=50) 
         """
 
-        path=r"C:\Users\Charles TCHANAKE\Desktop\virva\data\zipcodes.txt"
+        path=r"C:\Users\dataf\Desktop\virva\data\zipcodes.txt"
 
         return Constructor(path, column_name, number)
     
@@ -259,7 +258,7 @@ class Generator:
         """
 
 
-        path=r"C:\Users\Charles TCHANAKE\Desktop\virva\data\diseases.txt"
+        path=r"C:\Users\dataf\Desktop\virva\data\diseases.txt"
 
         return Constructor(path, column_name, number)
     
@@ -284,7 +283,7 @@ class Generator:
         """
 
 
-        path=r"C:\Users\Charles TCHANAKE\Desktop\virva\data\foods.txt"
+        path=r"C:\Users\dataf\Desktop\virva\data\foods.txt"
 
         return Constructor(path, column_name, number)
 
@@ -309,7 +308,7 @@ class Generator:
         """
 
 
-        path=r"C:\Users\Charles TCHANAKE\Desktop\virva\data\us_states.txt"
+        path=r"C:\Users\dataf\Desktop\virva\data\us_states.txt"
 
         return Constructor(path, column_name, number)
 
@@ -334,7 +333,7 @@ class Generator:
         """
 
 
-        path=r"C:\Users\Charles TCHANAKE\Desktop\virva\data\countries.txt"
+        path=r"C:\Users\dataf\Desktop\virva\data\countries.txt"
 
         return Constructor(path, column_name, number)
 
