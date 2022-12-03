@@ -374,9 +374,5 @@ class Generator:
 
         path=path
         data.to_csv(os.path.join(path, name+".csv"), sep=",")
-        
 
-    
-    
 
-        
