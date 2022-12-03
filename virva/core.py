@@ -1,4 +1,4 @@
-#version Alpha : 0.0.6
+#version Alpha : 0.0.7
 
 import random
 import pandas as pd
