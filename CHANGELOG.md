@@ -37,4 +37,8 @@ Change Log
 0.0.6(12/2/2022)
 ----------------
 - Changing txt paths
+
+0.0.7(12/3/2022)
+----------------
+- Fix jobs generator path 
  
