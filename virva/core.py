@@ -183,7 +183,7 @@ class Generator:
 
         >>> Generator.generate_jobs(column_name="Names", number=50) 
         """
-        path=r"C:\Users\Charles TCHANAKE\Desktop\virva\data\jobs.txt"
+        path=r"C:\Users\dataf\Desktop\virva\data\jobs.txt"
 
         return Constructor(path, column_name, number)
 
