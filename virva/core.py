@@ -1,4 +1,4 @@
-#version Alpha : 0.0.8
+#version Alpha : 0.0.9
 
 import random
 import pandas as pd
@@ -160,7 +160,7 @@ class Generator:
         >>> Generator.generate_names(column_name="Names", number=50) 
         """
 
-        url=r"data\names.txt"
+        url=r"virva\data\names.txt"
 
         return Constructor(url, column_name, number)
         
@@ -182,7 +182,7 @@ class Generator:
 
         >>> Generator.generate_jobs(column_name="Names", number=50) 
         """
-        path=r"data\jobs.txt"
+        path=r"virva\data\jobs.txt"
 
         return Constructor(path, column_name, number)
 
@@ -208,7 +208,7 @@ class Generator:
         """
 
 
-        path=r"data\cities.txt"
+        path=r"virva\data\cities.txt"
         return Constructor(path, column_name, number)
 
 #===========================================================
@@ -231,7 +231,7 @@ class Generator:
         >>> Generator.generate_zipcodes(column_name="Zipcodes", number=50) 
         """
 
-        path=r"data\zipcodes.txt"
+        path=r"virva\data\zipcodes.txt"
 
         return Constructor(path, column_name, number)
     
@@ -257,7 +257,7 @@ class Generator:
         """
 
 
-        path=r"data\diseases.txt"
+        path=r"virva\data\diseases.txt"
 
         return Constructor(path, column_name, number)
     
@@ -282,7 +282,7 @@ class Generator:
         """
 
 
-        path=r"data\foods.txt"
+        path=r"virva\data\foods.txt"
 
         return Constructor(path, column_name, number)
 
@@ -307,7 +307,7 @@ class Generator:
         """
 
 
-        path=r"data\us_states.txt"
+        path=r"virva\data\us_states.txt"
 
         return Constructor(path, column_name, number)
 
@@ -332,7 +332,7 @@ class Generator:
         """
 
 
-        path=r"data\countries.txt"
+        path=r"virva\data\countries.txt"
 
         return Constructor(path, column_name, number)
 
