@@ -10,7 +10,7 @@ classifiers=[
 
 setup(
     name="virva",
-    version="0.0.9",
+    version="0.1.3",
     description="Virva is the simplest synthetic dataframe generator ",
     long_description=open("README.md", "r", encoding="utf-8").read(),
     long_description_content_type='text/markdown',

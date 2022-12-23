@@ -4,6 +4,7 @@ import random
 import pandas as pd
 import os
 from rich.traceback import install
+import pkgutil
 
 install()
 
@@ -20,12 +21,16 @@ class RandomNumber:
         return randomfloat
 
 
-def Constructor(path, column_name, number):
+def Constructor(txt_file, column_name, number):
     list=[]
-    path=path
-    infile=open(path, "r")
+    path=os.path.join(__package__, 'data', txt_file)
+    path = os.path.normpath(path)
+    print(path)
+    infile=open(path)
     aline=infile.readline()
+    print(aline)
     aline_length= len(aline.split(","))
+    print(aline_length)
 
     for i in range(0, number):
         n_random=random.randint(0,aline_length-1)
@@ -160,9 +165,7 @@ class Generator:
         >>> Generator.generate_names(column_name="Names", number=50) 
         """
 
-        url=r"virva\data\names.txt"
-
-        return Constructor(url, column_name, number)
+        return Constructor("names.txt", column_name, number)
         
 #==========================================================
     def generate_jobs(column_name:str, number:int):
@@ -182,9 +185,8 @@ class Generator:
 
         >>> Generator.generate_jobs(column_name="Names", number=50) 
         """
-        path=r"virva\data\jobs.txt"
 
-        return Constructor(path, column_name, number)
+        return Constructor('jobs.txt', column_name, number)
 
 #==============================================================
 
@@ -207,9 +209,7 @@ class Generator:
         >>> Generator.generate_cities(column_name="Cities", number=50) 
         """
 
-
-        path=r"virva\data\cities.txt"
-        return Constructor(path, column_name, number)
+        return Constructor("cities.txt", column_name, number)
 
 #===========================================================
 
@@ -231,9 +231,7 @@ class Generator:
         >>> Generator.generate_zipcodes(column_name="Zipcodes", number=50) 
         """
 
-        path=r"virva\data\zipcodes.txt"
-
-        return Constructor(path, column_name, number)
+        return Constructor("zipcodes.txt", column_name, number)
     
 
 #=============================================================
@@ -256,10 +254,7 @@ class Generator:
         >>> Generator.generate_diseases(column_name="Diseases", number=50) 
         """
 
-
-        path=r"virva\data\diseases.txt"
-
-        return Constructor(path, column_name, number)
+        return Constructor("diseases.txt", column_name, number)
     
 #=============================================================
 
@@ -281,10 +276,7 @@ class Generator:
         >>> Generator.generate_foods(column_name="Diseases", number=50) 
         """
 
-
-        path=r"virva\data\foods.txt"
-
-        return Constructor(path, column_name, number)
+        return Constructor("foods.txt", column_name, number)
 
 #=============================================================
 
@@ -306,10 +298,7 @@ class Generator:
         >>> Generator.generate_us_states(column_name="US states", number=50) 
         """
 
-
-        path=r"virva\data\us_states.txt"
-
-        return Constructor(path, column_name, number)
+        return Constructor("us_states.txt", column_name, number)
 
 #=============================================================
 
@@ -331,10 +320,7 @@ class Generator:
         >>> Generator.generate_countries(column_name="Countries", number=50) 
         """
 
-
-        path=r"virva\data\countries.txt"
-
-        return Constructor(path, column_name, number)
+        return Constructor("countries.txt", column_name, number)
 
 #=============================================================
     def assemble(path, list_of_data, name:str):
