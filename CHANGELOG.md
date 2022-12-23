@@ -42,3 +42,6 @@ Change Log
 ----------------
 - Fix jobs generator path 
  
+ 0.0.8(12/23/2022)
+ -----------------
+ -Fix all data paths
