@@ -26,7 +26,6 @@ def Constructor(path, column_name, number):
     infile=open(path, "r")
     aline=infile.readline()
     aline_length= len(aline.split(","))
-    #print(aline_length)
 
     for i in range(0, number):
         n_random=random.randint(0,aline_length-1)
@@ -161,9 +160,9 @@ class Generator:
         >>> Generator.generate_names(column_name="Names", number=50) 
         """
 
-        path=r"C:\Users\dataf\Desktop\virva\data\names.txt"
+        url=r"data\names.txt"
 
-        return Constructor(path, column_name, number)
+        return Constructor(url, column_name, number)
         
 #==========================================================
     def generate_jobs(column_name:str, number:int):
@@ -183,7 +182,7 @@ class Generator:
 
         >>> Generator.generate_jobs(column_name="Names", number=50) 
         """
-        path=r"C:\Users\dataf\Desktop\virva\data\jobs.txt"
+        path=r"data\jobs.txt"
 
         return Constructor(path, column_name, number)
 
@@ -209,7 +208,7 @@ class Generator:
         """
 
 
-        path=r"C:\Users\dataf\Desktop\virva\data\cities.txt"
+        path=r"data\cities.txt"
         return Constructor(path, column_name, number)
 
 #===========================================================
@@ -232,7 +231,7 @@ class Generator:
         >>> Generator.generate_zipcodes(column_name="Zipcodes", number=50) 
         """
 
-        path=r"C:\Users\dataf\Desktop\virva\data\zipcodes.txt"
+        path=r"data\zipcodes.txt"
 
         return Constructor(path, column_name, number)
     
@@ -258,7 +257,7 @@ class Generator:
         """
 
 
-        path=r"C:\Users\dataf\Desktop\virva\data\diseases.txt"
+        path=r"data\diseases.txt"
 
         return Constructor(path, column_name, number)
     
@@ -283,7 +282,7 @@ class Generator:
         """
 
 
-        path=r"C:\Users\dataf\Desktop\virva\data\foods.txt"
+        path=r"data\foods.txt"
 
         return Constructor(path, column_name, number)
 
@@ -308,7 +307,7 @@ class Generator:
         """
 
 
-        path=r"C:\Users\dataf\Desktop\virva\data\us_states.txt"
+        path=r"data\us_states.txt"
 
         return Constructor(path, column_name, number)
 
@@ -333,7 +332,7 @@ class Generator:
         """
 
 
-        path=r"C:\Users\dataf\Desktop\virva\data\countries.txt"
+        path=r"data\countries.txt"
 
         return Constructor(path, column_name, number)
 
