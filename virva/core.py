@@ -1,16 +1,18 @@
-#version Beta : 0.1.4
+#version Beta : 0.1.5
 
 import random
 import pandas as pd
 import os
 from rich.traceback import install
-from data.cities import Cities
-from data.countries import Countries
-from data.names import Names
-from data.us_state import US_states
-from data.jobs import Jobs
-from data.foods import Foods
-from data.diseases import Diseases
+from virva.cities import Cities
+from virva.countries import Countries
+from virva.names import Names
+from virva.us_state import US_states
+from virva.jobs import Jobs
+from virva.foods import Foods
+from virva.diseases import Diseases
+
+
 
 install()
 
