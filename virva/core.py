@@ -4,7 +4,13 @@ import random
 import pandas as pd
 import os
 from rich.traceback import install
-import pkgutil
+from data.cities import Cities
+from data.countries import Countries
+from data.names import Names
+from data.us_state import US_states
+from data.jobs import Jobs
+from data.foods import Foods
+from data.diseases import Diseases
 
 install()
 
@@ -21,20 +27,24 @@ class RandomNumber:
         return randomfloat
 
 
-def Constructor(txt_file, column_name, number):
+def Constructor(list_db, column_name, number):
     list=[]
-    path=os.path.join(__package__, 'data', txt_file)
-    path = os.path.normpath(path)
-    print(path)
-    infile=open(path)
-    aline=infile.readline()
-    print(aline)
-    aline_length= len(aline.split(","))
-    print(aline_length)
+    #path=os.path.join(__package__, 'data', txt_file)
+    #path = os.path.normpath(path)
+    #print(path)
+    #infile=open(path)
+    #aline=infile.readline()
+    #print(aline)
+    #aline_length= len(aline.split(","))
+    listdb=list_db
+    #print(listdb)
+    listdb_length=len(listdb)
+    #print(listdb_length)
 
     for i in range(0, number):
-        n_random=random.randint(0,aline_length-1)
-        name=aline.split(",")[n_random]
+        n_random=random.randint(0,listdb_length-1)
+        #name=aline.split(",")[n_random]
+        name=listdb[n_random]
         list.append(name)
         d={column_name:list}
         dataframe=pd.DataFrame(data=d)
@@ -164,8 +174,8 @@ class Generator:
 
         >>> Generator.generate_names(column_name="Names", number=50) 
         """
-
-        return Constructor("names.txt", column_name, number)
+        names_db=Names()
+        return Constructor(names_db, column_name, number)
         
 #==========================================================
     def generate_jobs(column_name:str, number:int):
@@ -185,8 +195,8 @@ class Generator:
 
         >>> Generator.generate_jobs(column_name="Names", number=50) 
         """
-
-        return Constructor('jobs.txt', column_name, number)
+        jobs_db=Jobs()
+        return Constructor(jobs_db, column_name, number)
 
 #==============================================================
 
@@ -208,8 +218,8 @@ class Generator:
 
         >>> Generator.generate_cities(column_name="Cities", number=50) 
         """
-
-        return Constructor("cities.txt", column_name, number)
+        cities_db=Cities()
+        return Constructor(cities_db, column_name, number)
 
 #===========================================================
 
@@ -253,8 +263,8 @@ class Generator:
 
         >>> Generator.generate_diseases(column_name="Diseases", number=50) 
         """
-
-        return Constructor("diseases.txt", column_name, number)
+        diseases_db=Diseases()
+        return Constructor(diseases_db, column_name, number)
     
 #=============================================================
 
@@ -275,8 +285,8 @@ class Generator:
 
         >>> Generator.generate_foods(column_name="Diseases", number=50) 
         """
-
-        return Constructor("foods.txt", column_name, number)
+        foods_db=Foods()
+        return Constructor(foods_db, column_name, number)
 
 #=============================================================
 
@@ -297,8 +307,8 @@ class Generator:
 
         >>> Generator.generate_us_states(column_name="US states", number=50) 
         """
-
-        return Constructor("us_states.txt", column_name, number)
+        us_states_db=US_states()
+        return Constructor(us_states_db, column_name, number)
 
 #=============================================================
 
@@ -319,8 +329,8 @@ class Generator:
 
         >>> Generator.generate_countries(column_name="Countries", number=50) 
         """
-
-        return Constructor("countries.txt", column_name, number)
+        countries_db=Countries()
+        return Constructor(countries_db, column_name, number)
 
 #=============================================================
     def assemble(path, list_of_data, name:str):
