@@ -1,4 +1,4 @@
-#version Alpha : 0.0.9
+#version Beta : 0.1.4
 
 import random
 import pandas as pd
@@ -223,25 +223,25 @@ class Generator:
 
 #===========================================================
 
-    def generate_zipcodes(column_name:str, number:int):
+#    def generate_zipcodes(column_name:str, number:int):
 
-        """
-        This function generate random zipcode
-
-        Params:
-        ---------
-
-        column_name(String|required)="The name of the column"
-
-        number(Integer|required)= "The number of sample you want to generate"
-
-        Usages:
-        --------
-
-        >>> Generator.generate_zipcodes(column_name="Zipcodes", number=50) 
-        """
-
-        return Constructor("zipcodes.txt", column_name, number)
+#        """
+#        This function generate random zipcode
+#
+#        Params:
+#        ---------
+#
+#        column_name(String|required)="The name of the column"
+#
+#        number(Integer|required)= "The number of sample you want to generate"
+#
+#        Usages:
+#        --------
+#
+#        >>> Generator.generate_zipcodes(column_name="Zipcodes", number=50) 
+#        """
+#
+#        return Constructor("zipcodes.txt", column_name, number)
     
 
 #=============================================================

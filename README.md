@@ -1,18 +1,16 @@
 # Virva
 
-Virva is the simplest synthetic dataframe generator 
+Virva is the simplest fake dataframe generator 
 
-check the  [Virva documentation](https://charleslf2.github.io/virva/) here
 # Purpose of the package
-+  The purpose of this package is to provide to machine learning practitioners the world simplest synthetic dataframe generator
++  The purpose of this package is to provide the world simplest fake dataframe generator
 
 
 # Features
-+ Generate synthetic dataframe of any lenght 
++ Generate fake dataframe of any lenght 
 + Random names generations
 + Random cities generations
 + Random jobs title generations
-+ Random Zipcode generations
 + Random contrie generations
 + CSV export
 + Generate custom categorical variables
@@ -36,22 +34,40 @@ pip install virva
 >>> from virva.core import Generator
 
 # generate 50 random names
->>> dataframe_one= Generator.generate_names("Names", number=50)
-
-# generate 50 random cities
->>> dataframe_two = Generator.generate_cities("Cities", number=50)
-
-# generate 50 random jobs
->>> dataframe_three = Generator.generate_jobs("Jobs", number=50)
+>>> names= Generator.generate_names("Names", number=50)
 
 # generate 50 random age's between 5 and  18 year old
->>> dataframe_four =Generator.generate_integers("Ages", number=50, 5, 18)
+>>> ages =Generator.generate_integers("Ages", number=50, 5, 18)
+
+# generate 50 random  scores between 1.0 and 5.0
+>>> scores=Generator.generate_floats("stars", number=50, 1.0, 5.1)
+
+# generate 50 random gender type between Male (M) and Female (F)
+>>> gender=Generator.generate_objects("Gender", number=50,  ["M", "F"])
+
+# generate 50 random jobs
+>>> jobs= Generator.generate_jobs("Jobs", number=50)
+
+# generate 50 random cities
+>>> cities= Generator.generate_cities("Cities", number=50)
+
+# generate 50 random diseases
+>>> diseases=Generator.generate_diseases("diseases", number=50)
+
+# generate 50 random foods
+>>> foods=Generator.generate_foods("foods", number=50)
+
+# generate 50 random us_states
+>>> us_states=Generator.generate_us_states("us_states", number=50)
+
+# generate 50 random contries
+>>> countries=Generator.generate_countries("Countries", number=50)
+
 
 #generate csv file with above dataframe with the name "my_shynthetic_dataframe"
->>> list_of_dataframe=[dataframe_one, dataframe_two,dataframe_three,
-dataframe_four]
+>>> list_of_dataframe=[names, ages, scores, gender, jobs, cities, diseases, foods, us_states, countries]
 
->>>Generator.assemble(output_directory_path, list_of_dataframe, "my_shynthetic_dataframe")
+>>>Generator.assemble("path/to/your/directory", list_of_dataframe, "my_shynthetic_dataframe")
 ```
 
 ### Contribution
