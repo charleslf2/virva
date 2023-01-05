@@ -57,3 +57,5 @@ Change Log
 0.1.8(1/1/2023)
 ---------------
 - It work(finally)
+0.1.9(1/4/2023)
+- fix diseases and contries names
