@@ -3,7 +3,7 @@
 import random
 import pandas as pd
 import os
-from rich.traceback import install
+#from rich.traceback import install
 from virva.cities import Cities
 from virva.countries import Countries
 from virva.names import Names
@@ -14,7 +14,7 @@ from virva.diseases import Diseases
 
 
 
-install()
+#install()
 
 random.seed(random.randint(0, 1000000000))
 
