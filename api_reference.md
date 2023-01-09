@@ -14,8 +14,6 @@ This page gives an overview of all Virva functions and methods
 
 +[generate_cities](#generate_cities)
 
-+[generate_zipcodes](#generate_zipcodes)
-
 +[generate_diseases](#generate_diseases)
 
 +[generate_foods](#generate_foods)
@@ -43,9 +41,6 @@ This function generate random jobs
 
 ***generate_cities***<a name='generate_cities'></a>
 This function generate random cities
-
-***generate_zipcodes***<a name='generate_zipcodes'></a>
-This function generate random zipcode
 
 ***generate_diseases***<a name='generate_diseases'></a>
 This function generate random diseases
