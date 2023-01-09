@@ -26,4 +26,5 @@ setup(
     "csv generator", "dataframe generator"],
     packages=find_packages(),
     install_requires=["pandas"],
+    include_package_data=True,
 )
