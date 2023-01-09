@@ -25,5 +25,5 @@ setup(
     keywords=["data generator", "fake data generator", 
     "csv generator", "dataframe generator"],
     packages=find_packages(),
-    install_requires=["pandas", "rich"]
+    install_requires=["pandas"],
 )
